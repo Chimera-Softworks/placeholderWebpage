@@ -1,0 +1,80 @@
+:root{
+  /*Color scheme*/
+  --Midde: #680747;
+  --Light: #f70776;
+  --Dark: #141010;
+}
+
+
+body {
+    overflow-x: hidden;
+    animation: colorChange 8s infinite;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--Dark);
+    color: white;
+    text-align: center;
+    animation-name: fadeIn;
+    animation-duration: 4s;
+}
+
+a { color: var(--Light); }        
+a:visited { color: var(--Light); } 
+a:hover { color: var(--Light); }  
+a:active { color:var(--Light); }  
+
+.middleContainer {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 700;
+}
+
+#brandName {
+    color: var(--Light);;
+    animation-name: blendIn;
+    animation-duration: 3s;
+}
+
+#message {
+    color: var(--Light);;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+
+@keyframes blendIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0%); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes colorChange {
+    0% { background-color: var(--Dark); }
+    50% { background-color: var(--Midde);}
+    90% { background-color: var(--Dark); }
+    100% { background-color: var(--Dark); }
+}
+
+@media only screen and (max-width: 768px) { 
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px; 
+    }
+}
+
